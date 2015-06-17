@@ -1,0 +1,85 @@
+# Folders #
+hybris/bin/ext-accelerator/
+hybris/bin/ext-addon/
+hybris/bin/ext-atdd/
+hybris/bin/ext-atddtests/
+hybris/bin/ext-backoffice/
+hybris/bin/ext-channel/
+hybris/bin/ext-cockpit/
+hybris/bin/ext-commerce/
+hybris/bin/ext-content/
+hybris/bin/ext-data/
+hybris/bin/ext-deprecated/
+hybris/bin/ext-eventtracking/
+hybris/bin/ext-integration
+hybris/bin/ext-entegration/
+hybris/bin/ext-platform-optional/
+hybris/bin/ext-print/
+hybris/bin/ext-supportability/
+hybris/bin/ext-template/
+hybris/bin/platform/
+hybris/config/licence/
+hybris/log/
+hybris/data/
+hybris/sampleconfigurations/
+
+hybris-dependencies/
+hybris-ems/
+hybris-Mobile-Apps-SDK/
+hybris-oms/
+hybris-sbg/
+licenses/
+Mobile-Commerce-SDK/
+
+temp/
+classes/
+gensrc/
+jaxbgensrc/
+eclipsebin/
+measures/
+
+
+# generated folders and files #
+*.class
+*.number
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IntelliJ files #
+.idea/
+*.iml
+*.eml
+.DS_Store
+
+# Merge Files #
+*.BASE
+*.LOCAL
+*.REMOTE
+
+RemoteSystemsTempFiles/
+.metadata
+
+*.css
+*.zul
+*.gif
+*.png
+
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
