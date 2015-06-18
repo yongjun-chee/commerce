@@ -9,3 +9,5 @@ $lang=en
 UPDATE SiteTheme;code[unique=true];name[lang=$lang]
  ;black;"Black"
  ;blue;"Blue"
+ ;merchandise;"Merchandise"
+ 
