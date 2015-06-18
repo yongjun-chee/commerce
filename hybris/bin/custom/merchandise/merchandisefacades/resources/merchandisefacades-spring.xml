@@ -204,5 +204,12 @@
         <property name="list" ref="commerceSearchResultProductConverter"/>
         <property name="add"  ref="searchResultProductInternalOnlyPopulator"/>
     </bean>
+   
+   <bean id="customerInternalPopulator" class="de.hybris.merchandise.facades.populators.CustomerInternalPopulator"/>
+ 
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="customerConverter"/>
+        <property name="add"  ref="customerInternalPopulator"/>
+    </bean>  
     	
 </beans>
