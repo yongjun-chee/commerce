@@ -14,6 +14,7 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;de.hybris.merchandise.facades.product.data.GenderData>"/>
+		<property name="internalOnly" type="boolean"/>
 	</bean>
 
 	<bean class="de.hybris.merchandise.facades.product.data.GenderData">

@@ -11,7 +11,7 @@ $approved=approvalstatus(code)[default='approved']
 $taxGroup=Europe1PriceFactory_PTG(code)[default=jp-vat-full]
   
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved;$taxGroup
+INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);internalOnly[default=false];ean;variantType(code);$catalogVersion;$approved;$taxGroup
  ;0001;100;Mugs & Co;MUG-1;pieces;
  ;0002;100;Mugs & Co;PEN-1;pieces;
  ;0003;100;Mugs & Co;PAD-A5;pieces;
@@ -25,9 +25,9 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
  ;0110;210;Clothes & Co;SHIRT-WHITE-F-S;pieces;
  ;0111;210;Clothes & Co;SHIRT-WHITE-F-M;pieces;
  ;0112;210;Clothes & Co;SHIRT-WHITE-F-L;pieces;
- ;0200;220;Clothes & Co;SWEAT-WHITE-M-S;pieces;
- ;0201;220;Clothes & Co;SWEAT-WHITE-M-M;pieces;
- ;0202;220;Clothes & Co;SWEAT-WHITE-M-L;pieces;
- ;0210;220;Clothes & Co;SWEAT-WHITE-F-S;pieces;
- ;0211;220;Clothes & Co;SWEAT-WHITE-F-M;pieces;
- ;0212;220;Clothes & Co;SWEAT-WHITE-F-L;pieces;
+ ;0200;220;Clothes & Co;SWEAT-WHITE-M-S;pieces;true
+ ;0201;220;Clothes & Co;SWEAT-WHITE-M-M;pieces;true
+ ;0202;220;Clothes & Co;SWEAT-WHITE-M-L;pieces;true
+ ;0210;220;Clothes & Co;SWEAT-WHITE-F-S;pieces;true
+ ;0211;220;Clothes & Co;SWEAT-WHITE-F-M;pieces;true
+ ;0212;220;Clothes & Co;SWEAT-WHITE-F-L;pieces;true
