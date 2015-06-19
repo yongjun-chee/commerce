@@ -18,6 +18,7 @@
 		<!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
 		<requires-extension name="hmc"/>
 		<requires-extension name="addonsupport"/>
+		<requires-extension name="cms2"/>		
 
 		<coremodule generated="true" manager="de.hybris.platform.addons.randomimageaddon.jalo.RandomimageaddonManager" packageroot="de.hybris.platform.addons.randomimageaddon"/>
 
