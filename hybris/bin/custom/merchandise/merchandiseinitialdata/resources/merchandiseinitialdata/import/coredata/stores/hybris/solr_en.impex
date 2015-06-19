@@ -17,6 +17,8 @@ UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=
  ;$solrIndexedType;name;"Name"
  ;$solrIndexedType;price;"Price"
  ;$solrIndexedType;summary;"Summary"
+ ;$solrIndexedType;reviewAvgRatingRange;"Reviews"
+
 # Define the available sorts
 UPDATE SolrSort;indexedType(identifier)[unique=true];code[unique=true];name[lang=$lang];useBoost
  ;$solrIndexedType;name-asc;"Name (ascending)";"false";
