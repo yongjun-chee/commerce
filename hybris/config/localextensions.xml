@@ -85,6 +85,8 @@
 		<extension name="merchandiseinitialdata"/>
 		<extension name="merchandisefacades"/>
 		<extension name="merchandisecockpits"/>
+		<extension name="merchandisecommerceservices"/>		
+
                  
     </extensions>
 </hybrisconfig>
