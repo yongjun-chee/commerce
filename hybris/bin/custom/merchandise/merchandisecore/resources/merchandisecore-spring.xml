@@ -480,6 +480,11 @@
 		<property name="categorySource" ref="hybrisBrandCategorySource" />
 	</bean>
 	<!-- BTG -->
-    <bean id="customerInternalFlagValueProvider" class="de.hybris.merchandise.core.btg.condition.operand.valueprovider.CustomerInternalFlagValueProvider" />	
+    <bean id="customerInternalFlagValueProvider" class="de.hybris.merchandise.core.btg.condition.operand.valueprovider.CustomerInternalFlagValueProvider" />
+    
+    	<bean id="hybrisPointOfServiceFacetDisplayNameProvider"
+    	class="de.hybris.merchandise.core.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider">
+    	<property name="pointOfServiceService" ref="pointOfServiceService" />
+	</bean>	
 	
 </beans>

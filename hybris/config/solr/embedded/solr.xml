@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <solr persistent="true" sharedLib="hybris">
   <cores adminPath="/admin/cores">
-    <core name="master_hybris_Product" instanceDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/config/solr/embedded" dataDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/data/solrfacetsearch/MASTER/hybris_Product_1"/>
+    <core name="master_hybris_Product" instanceDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/config/solr/embedded" dataDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/data/solrfacetsearch/MASTER/hybris_Product"/>
 
-    <core name="master_hybris_Product_1" instanceDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/config/solr/embedded" dataDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/data/solrfacetsearch/MASTER/hybris_Product"/>
+    <core name="master_hybris_Product_1" instanceDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/config/solr/embedded" dataDir="/Users/yongjunchee/code/commerce5/commerceTrail/hybris/data/solrfacetsearch/MASTER/hybris_Product_1"/>
 </cores>
 </solr>
