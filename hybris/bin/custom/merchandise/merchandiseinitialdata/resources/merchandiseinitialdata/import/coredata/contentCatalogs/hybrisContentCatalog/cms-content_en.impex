@@ -28,3 +28,9 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
  ;;update-email;"Update Email"
  ;;update-profile;"Update Profile"
  ;;updatePassword;"Update Forgotten Password"
+ 
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpg'];altText
+;;Merch_450x290_HybridsBanner_EN_02.jpg;$siteResource/images/banners/site/Merch_450x290_HybridsBanner_EN_02.jpg;;"Not a hybrid yet?"
+
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=en]
+;;HybridsBanner;Merch_450x290_HybridsBanner_EN_02.jpg
