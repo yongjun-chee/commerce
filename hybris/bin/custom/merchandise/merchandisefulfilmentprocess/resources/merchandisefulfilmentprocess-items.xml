@@ -15,6 +15,12 @@
 <items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			xsi:noNamespaceSchemaLocation="items.xsd">
 	
+	<enumtypes>
+    	<enumtype code="OrderStatus" autocreate="false" generate="false" dynamic="true">
+        	<value code="WAITING_FOR_IMMEDIATE_CANCEL" />
+    	</enumtype>
+	</enumtypes>
+
 	<itemtypes>
 			<itemtype code="ConsignmentProcess" autocreate="false" generate="false" >
 			<attributes>
@@ -41,4 +47,7 @@
 			</attributes>
 			</itemtype>
 	</itemtypes>
+		
 </items>
+
+

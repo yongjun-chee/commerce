@@ -110,5 +110,14 @@
 		<property name="businessProcessService" ref="businessProcessService"/>
 		<property name="sessionService" ref="sessionService"/>
 	</bean>
+
+	<alias alias="dynamicAttributesOrderStatusDisplay" name ="merchandiseDynamicAttributesOrderStatusDisplayByMap"/>
+	<bean id="merchandiseDynamicAttributesOrderStatusDisplayByMap" parent="acceleratorDynamicAttributesOrderStatusDisplayByMap">
+    	<property name="statusDisplayMap">
+        	<map merge="true">
+            	<entry key="WAITING_FOR_IMMEDIATE_CANCEL" value="waitingForImmediateCancel"/>
+        	</map>
+    	</property>
+	</bean>		
 	
 </beans>
