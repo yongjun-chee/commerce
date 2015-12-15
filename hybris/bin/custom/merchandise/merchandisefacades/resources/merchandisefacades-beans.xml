@@ -25,4 +25,14 @@
 	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
         <property name="internal" type="boolean"/>
     </bean>
+    
+    <bean class="de.hybris.platform.commercefacades.order.data.OrderHistoryData">
+        <property name="cancellable" type="boolean"/>
+    </bean>
+    
+    <bean class="de.hybris.merchandise.facades.order.data.OrderCancelResultData">
+        <property name="success" type="boolean"/>
+        <property name="orderId" type="String"/>
+        <property name="failReason" type="String"/>
+    </bean>
 </beans>

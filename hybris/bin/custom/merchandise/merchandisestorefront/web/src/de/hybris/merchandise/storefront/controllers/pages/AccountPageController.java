@@ -13,6 +13,9 @@
  */
 package de.hybris.merchandise.storefront.controllers.pages;
 
+import de.hybris.merchandise.facades.order.OrderCancelFacade;
+import de.hybris.merchandise.facades.order.data.OrderCancelResultData;
+import de.hybris.merchandise.storefront.controllers.ControllerConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.annotations.RequireHardLogIn;
 import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.Breadcrumb;
 import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.ResourceBreadcrumbBuilder;
@@ -49,7 +52,6 @@ import de.hybris.platform.commerceservices.search.pagedata.PageableData;
 import de.hybris.platform.commerceservices.search.pagedata.SearchPageData;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.util.Config;
-import de.hybris.merchandise.storefront.controllers.ControllerConstants;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -90,6 +92,8 @@ public class AccountPageController extends AbstractSearchPageController
 	private static final String REDIRECT_TO_ADDRESS_BOOK_PAGE = REDIRECT_PREFIX + "/my-account/address-book";
 	private static final String REDIRECT_TO_PAYMENT_INFO_PAGE = REDIRECT_PREFIX + "/my-account/payment-details";
 	private static final String REDIRECT_TO_PROFILE_PAGE = REDIRECT_PREFIX + "/my-account/profile";
+	private static final String REDIRECT_TO_ORDERS = REDIRECT_PREFIX + "/my-account/orders";
+
 	/**
 	 * We use this suffix pattern because of an issue with Spring 3.1 where a Uri value is incorrectly extracted if it
 	 * contains on or more '.' characters. Please see https://jira.springsource.org/browse/SPR-6164 for a discussion on
@@ -147,6 +151,9 @@ public class AccountPageController extends AbstractSearchPageController
 
 	@Resource(name = "addressVerificationResultHandler")
 	private AddressVerificationResultHandler addressVerificationResultHandler;
+
+	@Resource(name = "orderCancelFacade")
+	private OrderCancelFacade orderCancelFacade;
 
 	protected PasswordValidator getPasswordValidator()
 	{
@@ -920,5 +927,15 @@ public class AccountPageController extends AbstractSearchPageController
 		GlobalMessages.addFlashMessage(redirectAttributes, GlobalMessages.CONF_MESSAGES_HOLDER,
 				"text.account.profile.paymentCart.removed");
 		return REDIRECT_TO_PAYMENT_INFO_PAGE;
+	}
+
+	@RequestMapping(value = "/order/cancel/{orderCode}", method = RequestMethod.POST)
+	public String orderCancel(@PathVariable("orderCode") final String orderCode, final RedirectAttributes redirectAttributes)
+			throws CMSItemNotFoundException
+	{
+		final OrderData orderDetails = orderFacade.getOrderDetailsForCode(orderCode);
+		final OrderCancelResultData cancelResult = orderCancelFacade.cancelOrder(orderDetails);
+		redirectAttributes.addFlashAttribute("orderCancelResult", cancelResult);
+		return REDIRECT_TO_ORDERS;
 	}
 }

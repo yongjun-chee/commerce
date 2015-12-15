@@ -70,6 +70,7 @@
 						</ycommerce:testId>
 					</td>
 					<td headers="header5">
+						<c:set var="cancellable" value="${order.cancellable}" scope="request" />
 						<c:set var="orderCode" value="${order.code}" scope="request"/>
 						<action:actions element="div" parentComponent="${component}"/>
 					</td>

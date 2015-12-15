@@ -139,7 +139,14 @@
 		<typegroup  name="BTG">
             <itemtype code="BTGCustomerInternalFlagOperand" extends="BTGAbstractCustomerOperand" autocreate="true" generate="true" jaloclass="de.hybris.merchandise.core.jalo.BTGCustomerInternalFlagOperand">
             </itemtype>
-        </typegroup>	
+        </typegroup>
+        
+       <typegroup name="CMS Actions">
+    		<itemtype code="CancelOrderAction"
+        		jaloclass="de.hybris.merchandise.core.jalo.actions.CancelOrderAction"
+        		extends="SimpleCMSAction" autocreate="true" generate="true">
+    		</itemtype>
+		</typegroup>
 
 	</itemtypes>
 </items>

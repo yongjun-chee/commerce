@@ -210,6 +210,25 @@
     <bean parent="modifyPopulatorList">
         <property name="list" ref="customerConverter"/>
         <property name="add"  ref="customerInternalPopulator"/>
-    </bean>  
+    </bean>
+ 
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="orderHistoryConverter"/>
+        <property name="add"  ref="orderHistoryCancellableFlagPopulator"/>
+    </bean>
+   
+   <bean id="orderHistoryCancellableFlagPopulator" class="de.hybris.merchandise.facades.populators.OrderHistoryCancellableFlagPopulator">
+        <property name="orderCancelService" ref="orderCancelService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+   
+   <alias name="merchandiseOrderCancelFacade" alias="orderCancelFacade"/>
+    <bean id="merchandiseOrderCancelFacade" class="de.hybris.merchandise.facades.order.impl.MerchandiseOrderCancelFacade">
+        <property name="baseStoreService" ref="baseStoreService"/>
+        <property name="customerAccountService" ref="customerAccountService"/>
+        <property name="orderCancelService" ref="orderCancelService"/>
+        <property name="userService" ref="userService"/>
+        <property name="modelService" ref="modelService"/>
+    </bean>        
     	
 </beans>
